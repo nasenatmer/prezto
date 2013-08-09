@@ -11,3 +11,52 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/custom/aliases.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/custom/aliases.zsh"
+fi
+
+# Some named directories
+scripts=/home/jakob/doc/linux/scripts
+mucke=/home/jakob/mucke
+neu=/home/jakob/mucke/neu
+nano=/media/usb
+ext=/media/ext
+
+# Set the list of directories that Zsh searches for programs.
+path=(
+  /usr/local/{bin,sbin}
+  ~jakob/doc/linux/scripts
+  $path
+)
+
+# Set the list of directories that zsh searches for functions.
+fpath=(/home/jakob/.zprezto/custom $fpath)
+
+# Some functions
+autoload -U background fix sani tc tuneit 
+
+# Some basic options
+setopt NO_BEEP			# disable audible bell
+setopt CORRECT_ALL		# enable correction for all words on the line...disabled by "nocorrect"
+setopt PRINT_EXIT_VALUE		# show the exit code when a command returns with a non-zero exit code
+
+# Customize zsh history
+setopt HIST_REDUCE_BLANKS	# remove blanks from history lines
+setopt NO_HIST_BEEP		# don't alert me when reaching the end of history
+
+# Don't complete pdfs and other binary files if I want to open something in vim!
+zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.pdf' '*.dvi' '*.odt' '*.odp' '*.doc' \
+	'*.docx' '*.xls' '*.xlsx' '*.rtf' '*.dvi' '*.jpg' '*.png' '*.mp3' '*.avi' '*.mp4' '*.iso'
+
+# Customize vi-style in shell to bone
+bindkey '\e[3~' delete-char
+bindkey '\e[4~' vi-end-of-line
+bindkey '\e[1~' vi-beginning-of-line
+
+# Custom vi-bindings for bone layout
+bindkey -M vicmd 'j' vi-backward-char
+bindkey -M vicmd 'l' up-line-or-history
+bindkey -M vicmd 'h' down-line-or-history
+bindkey -M vicmd 'k' vi-forward-char
+bindkey '' history-incremental-search-backward

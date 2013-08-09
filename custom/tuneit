@@ -1,0 +1,19 @@
+tuneit() {
+cd /home/jakob/gitarrentabs_and_tuning
+mpg123 -q 1-E.mp3
+mpg123 -q 1-E.mp3
+mpg123 -q 2-A.mp3
+mpg123 -q 2-A.mp3
+mpg123 -q 3-D.mp3
+mpg123 -q 3-D.mp3
+mpg123 -q 4-G.mp3
+mpg123 -q 4-G.mp3
+mpg123 -q 5-H.mp3
+sleep 1
+mpg123 -q 5-H.mp3
+sleep 1
+mpg123 -q 6-E.mp3
+sleep 1
+mpg123 -q 6-E.mp3
+cd -
+}

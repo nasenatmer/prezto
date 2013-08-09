@@ -1,0 +1,5 @@
+sani() {
+sudo chmod -x+X "$@"
+sudo chmod u=rw+X,g=r+X,o= "$@"
+sudo chown ${USER}.users "$@"
+}

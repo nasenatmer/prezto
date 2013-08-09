@@ -1,0 +1,8 @@
+tc() {
+echo
+echo "TexCount says…"
+texcount.pl -total -inc -utf8 "$@"
+echo
+echo "And texwordcount.pl:"
+/home/jakob/doc/linux/scripts/texwordcount.pl -q "$@"
+}

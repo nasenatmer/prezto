@@ -1,11 +1,7 @@
 #n paar Erleichterungen fuer den Alltag
-alias ls="ls --color=auto"
-alias ll="ls -lh"
 alias llt="ls -lht"
-alias lltr="ls -lhtr"
 alias lls="ls -lhS"
 alias llsr="ls -lhSr"
-alias la="ls -lAh"
 alias mkmine="sudo chown -R jakob:users"
 
 alias ..="cd .."
@@ -16,20 +12,14 @@ alias ccl="cd;cl"
 alias rh="rehash && source ~jakob/.zshrc"
 
 alias cp="cp -p"
-alias cpr="cp -r"
-alias rmr="rm -r"
-alias rmrf="rm -rf"
-alias mkdir="nocorrect mkdir"
+alias rm="rm -I"
+alias mv="nocorrect mv"
 alias grep="grep --color=auto"
 alias ctie="nocorrect setxkbmap de"
 alias asdf="nocorrect setxkbmap de neo"
-alias ctiectie="nocorrect setxkbmap de neo"
-alias num='grep -m 1 -B 15 "┴─────┘"  $HOME/tmp/git/neo/A-REFERENZ-A/neo20.txt'
-alias neo='grep -m 1 -B 15 "┴──────┘" $HOME/tmp/git/neo/A-REFERENZ-A/neo20.txt'
 
 alias duh1="du -h --max-depth=1 | sort -n"
 alias dfhh="df -h"
-alias dfh="discus -p 2"
 
 alias shut="sudo systemctl poweroff"
 alias reb="sudo systemctl reboot"
@@ -38,9 +28,6 @@ alias trc="sudo truecrypt -t"
 ######################################## mpd
 alias m="mpc"
 alias mt="mpc toggle"
-alias next="mpc next"
-alias prev="mpc prev"
-alias search="mpc search"
 alias nc="ncmpcpp"
 
 #Progs starten

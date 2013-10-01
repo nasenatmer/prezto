@@ -19,7 +19,7 @@ alias ctie="nocorrect setxkbmap de"
 alias asdf="nocorrect setxkbmap de neo"
 
 alias duh1="du -h --max-depth=1 | sort -n"
-alias dfhh="df -h"
+alias df="discus"
 
 alias shut="sudo systemctl poweroff"
 alias reb="sudo systemctl reboot"
@@ -56,7 +56,8 @@ alias -s pdf="background xdg-open"
 alias -s PDF="background xdg-open"
 alias -s html="background xdg-open"
 alias skype='LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype &>/dev/null &'
-alias pastetmux="pastebinit -i /tmp/.tmux-exchange"
+alias pastetmux="curlpaste -f /tmp/.tmux-exchange"
+alias wcu="wicd-curses"
 
 #Pacman shortcuts
 alias p="nocorrect yaourt"

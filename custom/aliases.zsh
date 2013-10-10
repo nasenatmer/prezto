@@ -19,7 +19,10 @@ alias ctie="nocorrect setxkbmap de"
 alias asdf="nocorrect setxkbmap de neo"
 
 alias duh1="du -h --max-depth=1 | sort -n"
+
+if [[ -s /usr/bin/discus ]]; then
 alias df="discus"
+fi
 
 alias shut="sudo systemctl poweroff"
 alias reb="sudo systemctl reboot"

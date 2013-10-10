@@ -17,21 +17,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/custom/aliases.zsh" ]]; then
 fi
 
 # Some named directories
-scripts=/home/jakob/doc/linux/scripts
-mucke=/home/jakob/mucke
-neu=/home/jakob/mucke/neu
+scripts=${HOME}/doc/linux/scripts
+mucke=${HOME}/mucke
+neu=${HOME}/mucke/neu
 nano=/media/usb
 ext=/media/ext
 
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  ~jakob/doc/linux/scripts
+  ${HOME}/doc/linux/scripts
   $path
 )
 
 # Set the list of directories that zsh searches for functions.
-fpath=(/home/jakob/.zprezto/custom $fpath)
+fpath=(${HOME}/.zprezto/custom $fpath)
 
 # Some functions
 autoload -U background fix sani tc tuneit 

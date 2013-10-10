@@ -17,18 +17,36 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/custom/aliases.zsh" ]]; then
 fi
 
 # Some named directories
-scripts=${HOME}/doc/linux/scripts
-mucke=${HOME}/mucke
-neu=${HOME}/mucke/neu
-nano=/media/usb
-ext=/media/ext
+if [[ -d "${HOME}/mucke" ]]; then
+	mucke=${HOME}/mucke
+fi
+
+if [[ -d "${HOME}/mucke/neu" ]]; then
+	neu=${HOME}/mucke/neu
+fi
+
+if [[ -d "/media/usb" ]]; then
+	nano=/media/usb
+fi
+
+if [[ -d "/media/ext" ]]; then
+	ext=/media/ext
+fi
 
 # Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  ${HOME}/doc/linux/scripts
-  $path
-)
+if [[ -d "${HOME}/doc/linux/scripts" ]]; then
+	path=(
+	/usr/local/{bin,sbin}
+	${HOME}/doc/linux/scripts
+	$path
+	)
+	scripts=${HOME}/doc/linux/scripts
+else 
+	path=(
+	/usr/local/{bin,sbin}
+	$path
+	)
+fi
 
 # Set the list of directories that zsh searches for functions.
 fpath=(${HOME}/.zprezto/custom $fpath)

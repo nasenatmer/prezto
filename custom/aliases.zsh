@@ -2,14 +2,14 @@
 alias llt="ls -lht"
 alias lls="ls -lhS"
 alias llsr="ls -lhSr"
-alias mkmine="sudo chown -R jakob:users"
+alias mkmine="sudo chown -R ${USER}:users"
 
 alias ..="cd .."
 alias ...="cd ../.."
 alias back="cd -"
 alias cl="clear"
 alias ccl="cd;cl"
-alias rh="rehash && source ~jakob/.zshrc"
+alias rh="rehash && source ${HOME}/.zshrc"
 
 alias cp="cp -p"
 alias rm="rm -I"

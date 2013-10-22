@@ -77,7 +77,7 @@ function prompt_jakob_setup {
 
   # Define prompts.
   PROMPT='%B%F{yellow}%n%f%b${git_info:+${(e)git_info[prompt]}}%(!. %B%F{red}#%f%b.)${editor_info[keymap]} '
-  RPROMPT='%f${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}${git_info[rprompt]}%F{green} ${_prompt_jakob_pwd}'
+  RPROMPT='${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}${git_info[rprompt]} %F{green}${_prompt_jakob_pwd}%f'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 

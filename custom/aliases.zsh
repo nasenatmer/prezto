@@ -32,7 +32,6 @@ alias nc="ncmpcpp"
 #Progs starten
 alias v="vim --servername vim"
 alias sv="sudo vim -u ~/.vimrc"
-#alias s="sudo"
 alias locu="sudo updatedb"
 alias loc="locate"
 alias calc="wcalc"
@@ -71,40 +70,8 @@ alias pR="nocorrect yaourt -R"
 alias prss="nocorrect yaourt -Rssu"
 alias pU="nocorrect yaourt -U"
 
-alias start="nocorrect sudo systemctl start"
-alias stop="nocorrect sudo systemctl stop"
-alias restart="nocorrect sudo systemctl restart"
-
 # systemd stuff
-alias sc="sudo systemctl"
-# start systemd service
-#    start() {
-#        nocorrect sudo systemctl start $@
-#    }
-# restart systemd service
-#    restart() {
-#        nocorrect sudo systemctl restart $@
-#    }
-# stop systemd service
-#    stop() {
-#        nocorrect sudo systemctl stop $@
-#    }
-# enable systemd service
-    0.enable() {
-        nocorrect sudo systemctl enable $@
-    }
-# disable a systemd service
-    0.disable() {
-        nocorrect sudo systemctl disable $@
-    }
-# show the status of a service
-    0.status() {
-        nocorrect systemctl status $@
-    }
-# reload a service configuration
-    0.reload() {
-        nocorrect sudo systemctl reload $@
-    }
+alias sc="nocorrect sudo systemctl"
 # list all running service
     0.list() {
         nocorrect systemctl
@@ -113,19 +80,7 @@ alias sc="sudo systemctl"
     0.failed () {
         nocorrect systemctl --failed
     }
-# list all systemd available unit files
-    0.list-files() {
-        nocorrect systemctl list-unit-files
-    }
 # check the log
     0.log() {
         nocorrect sudo journalctl
-    }
-# show wants
-    0.wants() {
-        nocorrect systemctl show -p "Wants" $@.target
-    }
-# analyze the system
-    0.analyze() {
-        nocorrect systemd-analyze $@
     }

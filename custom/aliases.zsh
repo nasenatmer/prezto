@@ -18,6 +18,8 @@ alias duh1="du -h --max-depth=1 | sort -n"
 
 if [[ -s /usr/bin/discus ]]; then
 alias df="discus"
+elif [[ -s /usr/bin/dfc ]]; then
+alias df="dfc"
 fi
 
 alias shut="sudo systemctl poweroff"

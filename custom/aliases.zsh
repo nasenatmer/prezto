@@ -22,10 +22,10 @@ elif [[ -s /usr/bin/dfc ]]; then
 alias df="dfc"
 fi
 
-alias shut="sudo systemctl poweroff"
-alias reb="sudo systemctl reboot"
+if [[ -s ~/tmp/git/k/k.sh ]]; then
+	source ~/tmp/git/k/k.sh
+fi
 
-alias trc="sudo truecrypt -t"
 ######################################## mpd
 alias m="mpc"
 alias mt="mpc toggle"
@@ -73,7 +73,8 @@ alias prss="nocorrect yaourt -Rssu"
 alias pU="nocorrect yaourt -U"
 
 # systemd stuff
-alias sc="nocorrect sudo systemctl"
+alias sc="nocorrect systemctl"
+alias ssc="nocorrect sudo systemctl"
 # list all running service
     0.list() {
         nocorrect systemctl

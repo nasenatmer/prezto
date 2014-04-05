@@ -9,6 +9,8 @@ alias cl="clear"
 alias ccl="cd;cl"
 
 alias cp="cp -p"
+alias cpp='rsync -avh --stats --progress'
+alias cppn='rsync -avnh --stats --progress'
 alias rm="rm -I"
 alias mv="nocorrect mv"
 alias ctie="nocorrect setxkbmap de"

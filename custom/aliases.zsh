@@ -18,7 +18,7 @@ alias asdf="nocorrect setxkbmap de neo"
 
 alias duh1="du -h --max-depth=1 | sort -n"
 
-if [[ -s /usr/bin/discus ]]; then
+if [[ -x /usr/bin/discus ]]; then
 alias df="discus"
 elif [[ -s /usr/bin/dfc ]]; then
 alias df="dfc"
@@ -26,6 +26,10 @@ fi
 
 if [[ -s ~/tmp/git/k/k.sh ]]; then
 	source ~/tmp/git/k/k.sh
+fi
+
+if [[ -x /usr/bin/umount.udisks2 ]]; then
+	alias umount="umount.udisks2"
 fi
 
 ######################################## mpd

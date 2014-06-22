@@ -11,27 +11,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/custom/aliases.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/custom/aliases.zsh"
 fi
 
 # Some named directories
-if [[ -d "${HOME}/mucke" ]]; then
-	mucke=${HOME}/mucke
-fi
-
-if [[ -d "${HOME}/mucke/neu" ]]; then
-	neu=${HOME}/mucke/neu
-fi
-
-if [[ -d "/media/usb" ]]; then
-	nano=/media/usb
-fi
-
-if [[ -d "/media/ext" ]]; then
-	ext=/media/ext
-fi
+mucke=${HOME}/mucke
+neu=${HOME}/mucke/neu
+ext=/media/ext
+ina=/media/inastore
 
 # Set the list of directories that Zsh searches for programs.
 if [[ -d "${HOME}/doc/linux/scripts" ]]; then
@@ -40,7 +28,6 @@ if [[ -d "${HOME}/doc/linux/scripts" ]]; then
 	${HOME}/doc/linux/scripts
 	$path
 	)
-	scripts=${HOME}/doc/linux/scripts
 else 
 	path=(
 	/usr/local/{bin,sbin}

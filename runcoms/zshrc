@@ -52,7 +52,7 @@ setopt NO_HIST_BEEP		# don't alert me when reaching the end of history
 
 # Don't complete pdfs and other binary files if I want to open something in vim!
 zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.pdf' '*.dvi' '*.odt' '*.odp' '*.doc' \
-	'*.docx' '*.xls' '*.xlsx' '*.rtf' '*.dvi' '*.jpg' '*.png' '*.mp3' '*.avi' '*.mp4' '*.iso'
+	'*.docx' '*.xls' '*.xlsx' '*.rtf' '*.dvi' '*.jpg' '*.png' '*.mp3' '*.avi' '*.mp4' '*.iso' '*.html'
 
 # Customize vi-style in shell to bone
 bindkey '\e[3~' delete-char

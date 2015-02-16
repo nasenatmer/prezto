@@ -20,6 +20,7 @@ mucke=${HOME}/mucke
 neu=${HOME}/mucke/neu
 ext=/media/ext
 ina=/media/inastore
+safe=/media/safe
 
 # Set the list of directories that Zsh searches for programs.
 if [[ -d "${HOME}/doc/linux/scripts" ]]; then

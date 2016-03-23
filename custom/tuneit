@@ -1,5 +1,5 @@
 tuneit() {
-cd /home/jakob/gitarrentabs_and_tuning
+cd /home/jakob/doc/diverses/gitarrentabs_and_tuning/tuning
 mpg123 -q 1-E.mp3
 mpg123 -q 1-E.mp3
 mpg123 -q 2-A.mp3
